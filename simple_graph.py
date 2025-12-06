@@ -1,5 +1,5 @@
 import math
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 
 NUM_ROTATIONS = 15
@@ -23,3 +23,13 @@ for degree in degree_list:
 
     x_values.append(x)
     y_values.append(y)
+
+figure, graph = plt.subplots()
+graph.plot(x_values, y_values)
+
+graph.set_title('Spiral Function', fontsize=20)
+graph.set_xlabel('Horizontal Position', fontsize=14)
+graph.set_ylabel('Vertical Position', fontsize=14)
+graph.tick_params(labelsize=14)
+
+plt.show()
