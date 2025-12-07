@@ -24,8 +24,10 @@ for degree in degree_list:
     x_values.append(x)
     y_values.append(y)
 
+plt.style.use('seaborn-v0_8')
+
 figure, graph = plt.subplots()
-graph.plot(x_values, y_values)
+graph.scatter(x_values, y_values, s=10 ,c=degree_list, cmap=plt.cm.viridis)
 
 graph.set_title('Spiral Function', fontsize=20)
 graph.set_xlabel('Horizontal Position', fontsize=14)
